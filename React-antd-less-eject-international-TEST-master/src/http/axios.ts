@@ -1,6 +1,6 @@
-import axios, { AxiosRequestConfig, AxiosResponse } from "axios";
+import axios, { AxiosResponse } from "axios";
 
-axios.interceptors.request.use((config: AxiosRequestConfig) => {
+axios.interceptors.request.use((config: any) => {
   if (!config) return;
   config.headers = {
     Authorization: localStorage.getItem("token") ?? "401",

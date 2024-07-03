@@ -29,7 +29,7 @@ export default function Memo() {
     if (!dataSource) return;
     const group = dataSource.data.reduce((acc: any, next: any) => {
       let key = next[1];
-      !acc[key] ? (acc[key] = []) : acc[key].push(next);
+      !acc[key] ? (acc[key] = [next]) : acc[key].push(next);
       return acc;
     }, {});
     console.log("Group",group);
