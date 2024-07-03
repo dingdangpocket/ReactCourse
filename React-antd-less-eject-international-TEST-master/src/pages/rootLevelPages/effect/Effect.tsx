@@ -48,7 +48,7 @@ export default function Effect() {
   //commonFunction...
   const onPhoneNumberInputRefChange = (
     inputEvent: ChangeEvent<HTMLInputElement>
-  ) => {    
+  ) => {
     const res = inputFilter(inputEvent?.target?.value);
     setPhoneNumber(res);
   };
@@ -75,6 +75,9 @@ export default function Effect() {
         alignItems: "center",
       }}
     >
+      <div style={{
+        color: "white"
+      }}>Effect</div>
       <div
         style={{
           width: 300,
@@ -97,17 +100,17 @@ export default function Effect() {
           style={
             btnDisabled
               ? {
-                  width: 100,
-                  height: 40,
-                  background: "gray",
-                  color: "white",
-                }
+                width: 100,
+                height: 40,
+                background: "gray",
+                color: "white",
+              }
               : {
-                  width: 100,
-                  height: 40,
-                  background: "#330066",
-                  color: "white",
-                }
+                width: 100,
+                height: 40,
+                background: "#330066",
+                color: "white",
+              }
           }
           disabled={btnDisabled}
           onClick={() => getAuthCode()}
@@ -148,17 +151,17 @@ export default function Effect() {
         style={
           btnDisabled
             ? {
-                width: 100,
-                height: 40,
-                background: "gray",
-                color: "white",
-              }
+              width: 100,
+              height: 40,
+              background: "gray",
+              color: "white",
+            }
             : {
-                width: 100,
-                height: 40,
-                background: "#330066",
-                color: "white",
-              }
+              width: 100,
+              height: 40,
+              background: "#330066",
+              color: "white",
+            }
         }
         disabled={btnDisabled}
         onClick={() => setCount(count + 1)}
